@@ -1,0 +1,18 @@
+en:
+  actions:
+    edit: 'edit'
+    disable: 'disable'
+    enable: 'enable'
+    destroy: 'destroy'
+    shop: 'Shop'
+  flash:
+    actions:
+      create:
+        notice: "%{resource_name} was successfully created."
+      update:
+        notice: "%{resource_name} was successfully updated."
+      destroy:
+        notice: "%{resource_name} was successfully destroyed."
+        alert: "%{resource_name} could not be destroyed."
+  messages:
+    confirm: 'Are you sure?' 
