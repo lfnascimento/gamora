@@ -1,0 +1,18 @@
+div class='page-header'
+  h1 = Offer.model_name.human.pluralize
+
+div class='row'
+  - @offers.each do |offer|
+    div class='col-sm'
+      div class='card'
+        div class='car-block'
+          - if offer.premium?
+            span class='badge badge-pill badge-info float-left'
+              = Offer.human_attribute_name(:premium)
+          - if offer.ends_at.present?
+            span class='offer-countdown badge badge-warning float-right' data-ends-at="#{offer.ends_at.strftime('%FT%T%:z')}"
+          h3 class='card-title'
+            = offer.advertiser_name
+          p class='card-text'
+            = offer.description
+          = link_to t('actions.shop'), offer.url, class: 'btn btn-block btn-primary', target: :_blank
