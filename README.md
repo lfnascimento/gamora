@@ -1,24 +1,28 @@
-# README
+# gamora(lemoney-challenge)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project from Lemoney developer challenge
 
-Things you may want to cover:
+To run this project you need to have:
 
-* Ruby version
+- **Ruby 2.5.0**
+- [PhantomJS](http://phantomjs.org/)
 
-* System dependencies
 
-* Configuration
+## Setup the project
+```
+$ git clone https://github.com/lfnascimento/gamora.git
+$ cd gamora
+$ bin/setup
+$ bundle exec rake - Run the tests to check if everything is working ok
+```
 
-* Database creation
+## Running the project
 
-* Database initialization
+1. ```$ bundle exec rails server```
+2. open http://localhost:3000
 
-* How to run the test suite
+## Checking coverage
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ coverage=on bundle exec rake - generate the coverage report then open the file coverage/index.html
+```
