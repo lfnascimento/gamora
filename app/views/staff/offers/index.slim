@@ -1,0 +1,26 @@
+table class='table'
+  thead
+    tr
+      th = Offer.human_attribute_name(:advertiser_name)
+      th = Offer.human_attribute_name(:url)
+      th = Offer.human_attribute_name(:description)
+      th = Offer.human_attribute_name(:starts_at)
+      th = Offer.human_attribute_name(:ends_at)
+      th = Offer.human_attribute_name(:premium)
+      th = Offer.human_attribute_name(:status)
+  tbody
+    - @offers.each do |offer|
+      tr
+        td = offer.advertiser_name
+        td = offer.url
+        td = offer.description
+        td = l(offer.starts_at, format: :short) if offer.starts_at.present?
+        td = l(offer.ends_at, format: :short) if offer.ends_at.present?
+        td = offer.premium
+        td = offer.status
+        td = link_to t('actions.edit'), edit_staff_offer_path(offer)
+        - if offer.disabled?
+          td = link_to t('actions.enable'), enable_staff_offer_path(offer)
+        - else
+          td = link_to t('actions.disable'), disable_staff_offer_path(offer)
+        td = link_to t('actions.destroy'), [:staff, offer], method: :delete, data: { confirm: t('messages.confirm') }
