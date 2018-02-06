@@ -8,7 +8,6 @@ git_source(:github) do |repo_name|
 end
 
 gem 'rails'                  , '~> 5.1.4'
-gem 'sqlite3'                , '~> 1.3.11'
 gem 'puma'                   , '~> 3.7'
 gem 'sass-rails'             , '~> 5.0'
 gem 'uglifier'               , '>= 1.3.0'
@@ -26,6 +25,7 @@ gem 'responders'             , '~> 2.4.0'
 gem 'validate_url'           , '~> 1.0.2'
 
 group :development, :test do
+  gem 'sqlite3'               , '~> 1.3.11'
   gem 'rspec-rails'           , '~> 3.7'
   gem 'spring'
   gem 'spring-watcher-listen' , '~> 2.0.0'
@@ -46,6 +46,11 @@ group :test do
   gem 'capybara'         , '~> 2.13'
   gem 'poltergeist'      , '~> 1.17.0'
   gem 'simplecov'        , '0.14.1'    , require: false
+end
+
+group :production do
+  gem 'pg'             , '~> 0.18.4'
+  gem 'rails_12factor' , '~> 0.0.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
