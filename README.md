@@ -26,3 +26,5 @@ $ bundle exec rake - Run the tests to check if everything is working ok
 ```
 $ coverage=on bundle exec rake - generate the coverage report then open the file coverage/index.html
 ```
+### Creating Offers
+open http://localhost:3000/staff/offers/new
