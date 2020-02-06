@@ -1,6 +1,4 @@
-# gamora(lemoney-challenge)
-
-Project from Lemoney developer challenge
+# gamora
 
 To run this project you need to have:
 
