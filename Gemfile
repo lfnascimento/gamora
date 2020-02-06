@@ -18,7 +18,7 @@ gem 'jquery-rails'           , '~> 4.3.1'
 
 gem 'slim-rails'             , '~> 3.1.3'
 gem 'bootstrap'              , '~> 4.0.0'
-gem 'simple_form'            , '~> 3.5.0'
+gem 'simple_form'            , '~> 5.0.0'
 gem 'jquery-countdown-rails' , '~> 2.0.2'
 
 gem 'responders'             , '~> 2.4.0'
